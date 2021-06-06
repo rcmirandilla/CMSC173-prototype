@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ModalComp } from 'components/Modal';
 import {
 	ModalBody,
@@ -21,7 +21,8 @@ import {
 	NormalStyle,
 } from './theme';
 
-export const Login = ({ onToggle, toggle, ...props }) => {
+export const Login = ({ onSubmit, onToggle, toggle, ...props }) => {
+	const [data, setData] = useState({ email: '', password: '' });
 	const [showPassword, setShowPassword] = useState(false);
 
 	return (
@@ -29,24 +30,41 @@ export const Login = ({ onToggle, toggle, ...props }) => {
 			toggle={toggle}
 			onToggle={(value) => {
 				onToggle(value);
-			}}>
+			}}
+			{...props}>
 			<ModalBody p='5' mb='5'>
 				<VStack spacing='3' fontFamily='body'>
 					<Text {...HeadingStyle}>Login Form</Text>
 					<InputGroup>
 						<InputLeftElement
+							value={data.email}
 							pointerEvents='none'
 							children={<EmailIcon color='black' />}
 						/>
-						<Input placeholder='Enter Email Address' />
+						<Input
+							onChange={(event) => {
+								setData({
+									...data,
+									email: event.currentTarget.value,
+								});
+							}}
+							placeholder='Enter Email Address'
+						/>
 					</InputGroup>
 					<InputGroup>
 						<InputLeftElement
+							value={data.password}
 							pointerEvents='none'
 							children={<LockIcon color='black' />}
 						/>
 						<Input
 							pr='3rem'
+							onChange={(event) => {
+								setData({
+									...data,
+									password: event.currentTarget.value,
+								});
+							}}
 							type={showPassword ? 'text' : 'password'}
 							placeholder='Enter Password'
 						/>
@@ -77,7 +95,14 @@ export const Login = ({ onToggle, toggle, ...props }) => {
 					</Button>
 				</HStack>
 				<VStack spacing='3'>
-					<Button {...ButtonStyle2('normal')}>LOGIN</Button>
+					<Button
+						{...ButtonStyle2('normal')}
+						onClick={() => {
+							onSubmit(data);
+							onToggle(false);
+						}}>
+						LOGIN
+					</Button>
 					<Text {...NormalStyle}>Or Login with</Text>
 					<VStack spacing='1' width='100%'>
 						<Button

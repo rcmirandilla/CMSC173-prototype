@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stack, Button } from '@chakra-ui/react';
+import { Stack, Button, Avatar } from '@chakra-ui/react';
 import { NavBarContainer } from './NavBarContainer';
 import { ItemToggle } from './ItemToggle';
 import { ItemContainer } from './ItemContainer';
@@ -21,10 +21,9 @@ const NavLinks = [
 	},
 ];
 
-export const NavBar = (props) => {
+export const NavBar = ({ user, setUser, ...props }) => {
 	const [loginToggle, setLoginToggle] = useState(false);
 	const [isItemsOpen, setIsItemsOpen] = useState(false);
-
 	return (
 		<NavBarContainer
 			{...props}
@@ -35,13 +34,22 @@ export const NavBar = (props) => {
 			<Stack {...NavContainerStyle(isItemsOpen)}>
 				<ItemContainer isOpen={isItemsOpen} items={NavLinks} />
 				<Stack direction='row' justify='flex-end' align='center'>
-					<Button
-						{...LogInStyle(isItemsOpen)}
-						onClick={() => {
-							setLoginToggle(true);
-						}}>
-						Log In
-					</Button>
+					{user.email === '' && user.password === '' ? (
+						<Button
+							{...LogInStyle(isItemsOpen)}
+							onClick={() => {
+								setLoginToggle(true);
+							}}>
+							Log In
+						</Button>
+					) : (
+						<Avatar
+							name='Dan Abrahmov'
+							src='https://bit.ly/dan-abramov'
+							cursor='pointer'
+							onClick={() => {}}
+						/>
+					)}
 					<ItemToggle
 						toggle={() => setIsItemsOpen(!isItemsOpen)}
 						isOpen={isItemsOpen}
@@ -49,6 +57,7 @@ export const NavBar = (props) => {
 				</Stack>
 			</Stack>
 			<Login
+				onSubmit={(value) => setUser(value)}
 				toggle={loginToggle}
 				onToggle={(value) => {
 					setLoginToggle(value);

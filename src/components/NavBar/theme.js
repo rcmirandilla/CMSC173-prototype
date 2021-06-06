@@ -8,7 +8,7 @@ export const ItemContainerStyle = {
 	justify: ['center', 'flex-end', 'flex-end', 'flex-end'],
 	direction: 'row',
 	pt: [2, 2, 0, 0],
-	mr: [0, 0, 2, 2],
+	mr: [2, 2, 4, 4],
 };
 
 export const ItemMainContainerStyle = (isOpen) => ({

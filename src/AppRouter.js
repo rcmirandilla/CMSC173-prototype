@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	BrowserRouter as Router,
 	Route,
@@ -11,6 +11,7 @@ import { LandingPage } from './pages/LandingPage';
 import theme from './utils/theme';
 
 const AppRouter = () => {
+	const [user, setUser] = useState({ email: '', password: '' });
 	return (
 		<ChakraProvider theme={theme}>
 			<Router>
@@ -19,7 +20,7 @@ const AppRouter = () => {
 					direction='column'
 					align='flex-start'
 					justify='flex-start'>
-					<NavBar />
+					<NavBar user={user} setUser={(value) => setUser(value)} />
 					<Switch>
 						<Route exact path='/' component={LandingPage} />
 						<Redirect to='/' />

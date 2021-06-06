@@ -16,6 +16,8 @@ export const ModalComp = ({ toggle, onToggle, header, children, ...props }) => {
 	useEffect(() => {
 		if (toggle) {
 			onOpen();
+		} else {
+			onClose();
 		}
 	}, [toggle, isOpen, onOpen]);
 	return (
