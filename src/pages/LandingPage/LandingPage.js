@@ -14,7 +14,11 @@ export const LandingPage = () => {
 	return (
 		<Stack {...LandingPageStyle}>
 			<Stack {...LeftContainerStyle}>
-				<Image src={bg} alt='presentation' width={['sm', 'md', 'lg']} />
+				<Image
+					src={bg}
+					alt='presentation_landing_picture'
+					width={['sm', 'md', 'lg']}
+				/>
 			</Stack>
 			<Stack {...RightContainerStyle}>
 				<Text
@@ -23,7 +27,7 @@ export const LandingPage = () => {
 					fontWeight='bolder'
 					color='primary'>
 					Discover and Create your own Presentation Slides through
-					SlideIt!
+					SlideIT!
 				</Text>
 				<Text {...TextStyle} fontSize='18px' color='secondary'>
 					Over 50,000+ Teachers and Students use this application to
@@ -32,7 +36,6 @@ export const LandingPage = () => {
 				</Text>
 				<Stack {...ButtonContainerStyle}>
 					<Button {...ButtonStyle}>Get Started</Button>
-					<Button {...ButtonStyle}>Create Account</Button>
 				</Stack>
 			</Stack>
 		</Stack>
