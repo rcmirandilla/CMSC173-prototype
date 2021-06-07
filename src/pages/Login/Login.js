@@ -39,7 +39,7 @@ export const Login = ({ onSubmit, onToggle, toggle, ...props }) => {
 						<InputLeftElement
 							value={data.email}
 							pointerEvents='none'
-							children={<EmailIcon color='black' />}
+							children={<EmailIcon color='gray.500' />}
 						/>
 						<Input
 							onChange={(event) => {
@@ -55,7 +55,7 @@ export const Login = ({ onSubmit, onToggle, toggle, ...props }) => {
 						<InputLeftElement
 							value={data.password}
 							pointerEvents='none'
-							children={<LockIcon color='black' />}
+							children={<LockIcon color='gray.500' />}
 						/>
 						<Input
 							pr='3rem'
@@ -72,7 +72,7 @@ export const Login = ({ onSubmit, onToggle, toggle, ...props }) => {
 							children={
 								<Button
 									{...ButtonStyle1}
-									color='black'
+									color='gray.500'
 									onClick={() => {
 										setShowPassword(!showPassword);
 									}}>
@@ -90,7 +90,7 @@ export const Login = ({ onSubmit, onToggle, toggle, ...props }) => {
 					justify='flex-start'
 					align='flex-start'
 					fontFamily='body'>
-					<Button {...ButtonStyle1} color='primary'>
+					<Button {...ButtonStyle1} color='secondary'>
 						Forgot Password?
 					</Button>
 				</HStack>

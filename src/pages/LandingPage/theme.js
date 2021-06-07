@@ -32,7 +32,7 @@ export const RightContainerStyle = {
 	width: ['100%', '100%', '100%', '50%'],
 	align: ['center', 'center', 'center', 'flex-start'],
 	justify: ['center', 'center', 'center', 'flex-start'],
-	padding: ['1rem', '1rem', '0rem', '0rem'],
+	padding: ['1rem', '1rem', '1rem', '0rem'],
 };
 
 export const LeftContainerStyle = {
@@ -44,7 +44,7 @@ export const LeftContainerStyle = {
 
 export const LandingPageStyle = {
 	direction: 'row',
-	padding: ['2rem', '4rem'],
+	padding: ['1rem', '2rem', '3rem', '4rem'],
 	width: '100%',
 	height: '100%',
 	justify: 'center',
