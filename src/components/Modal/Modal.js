@@ -19,7 +19,7 @@ export const ModalComp = ({ toggle, onToggle, header, children, ...props }) => {
 		} else {
 			onClose();
 		}
-	}, [toggle, isOpen, onOpen]);
+	}, [toggle, onOpen, onClose]);
 	return (
 		<Modal
 			initialFocusRef={initialRef}

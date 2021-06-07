@@ -84,3 +84,16 @@ export const NavContainerStyle = (isItemsOpen) => ({
 		'flex-end',
 	],
 });
+
+export const MenuItemStyle = {
+	color: 'primary',
+	fontSize: '18px',
+	_focus: {
+		bgColor: 'primary',
+		color: 'white',
+	},
+	_hover: {
+		bgColor: 'primary',
+		color: 'white',
+	},
+};

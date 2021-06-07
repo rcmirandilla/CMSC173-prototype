@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import {
-	Stack,
-	Button,
-	Avatar,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-} from '@chakra-ui/react';
+import { Stack, Button } from '@chakra-ui/react';
 import { NavBarContainer } from './NavBarContainer';
 import { ItemToggle } from './ItemToggle';
 import { ItemContainer } from './ItemContainer';
+import { AvatarMenu } from './AvatarMenu';
 import { Login } from 'pages/Login';
-import { IoLogOutOutline, IoSettingsOutline } from 'react-icons/io5';
 import { LogInStyle, NavContainerStyle, ItemLinkStyle } from './theme';
 
 const NavLinks = [
@@ -60,56 +52,7 @@ export const NavBar = ({ user, setUser, ...props }) => {
 							Log In
 						</Button>
 					) : (
-						<Menu>
-							<MenuButton
-								as={Avatar}
-								aria-label='Options'
-								icon={
-									<Avatar
-										name='Dan Abrahmov'
-										src='https://bit.ly/dan-abramov'
-										cursor='pointer'
-									/>
-								}
-								variant='outline'
-							/>
-							<MenuList>
-								<MenuItem
-									icon={
-										<IoSettingsOutline
-											style={{ fontSize: '18px' }}
-										/>
-									}
-									color='primary'
-									_hover={{
-										bgColor: 'primary',
-										color: 'white',
-									}}
-									_focus={{
-										bgColor: 'primary',
-										color: 'white',
-									}}>
-									Account Settings
-								</MenuItem>
-								<MenuItem
-									icon={
-										<IoLogOutOutline
-											style={{ fontSize: '18px' }}
-										/>
-									}
-									color='primary'
-									_focus={{
-										bgColor: 'primary',
-										color: 'white',
-									}}
-									_hover={{
-										bgColor: 'primary',
-										color: 'white',
-									}}>
-									Logout
-								</MenuItem>
-							</MenuList>
-						</Menu>
+						<AvatarMenu />
 					)}
 					<ItemToggle
 						toggle={() => setIsItemsOpen(!isItemsOpen)}
