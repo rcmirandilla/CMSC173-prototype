@@ -29,6 +29,7 @@ export const NavBarContainerStyle = (scrollY) => ({
 	fontWeight: 'bold',
 	position: scrollY > 1 ? 'sticky' : 'none',
 	top: 0,
+	zIndex: 999,
 });
 
 export const ItemLinkStyle = {

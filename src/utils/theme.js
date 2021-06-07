@@ -5,8 +5,9 @@ import { extendTheme } from '@chakra-ui/react';
 const theme = extendTheme({
 	styles: {
 		global: {
-			'html, body': {
+			'html, body, #root': {
 				backgroundColor: 'white',
+				height: '100%',
 			},
 		},
 	},

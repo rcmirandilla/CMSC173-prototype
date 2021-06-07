@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
 	Stack,
 	Button,
@@ -31,6 +32,7 @@ const NavLinks = [
 ];
 
 export const NavBar = ({ user, setUser, ...props }) => {
+	const history = useHistory();
 	const [loginToggle, setLoginToggle] = useState(false);
 	const [isItemsOpen, setIsItemsOpen] = useState(false);
 	return (
@@ -39,7 +41,13 @@ export const NavBar = ({ user, setUser, ...props }) => {
 			align={!isItemsOpen ? 'center' : ''}
 			bg={!isItemsOpen ? 'white' : 'primary'}
 			color={!isItemsOpen ? 'primary' : 'white'}>
-			<Button {...ItemLinkStyle}>SlideIT!</Button>
+			<Button
+				{...ItemLinkStyle}
+				onClick={() => {
+					history.push('/');
+				}}>
+				SlideIT!
+			</Button>
 			<Stack {...NavContainerStyle(isItemsOpen)}>
 				<ItemContainer isOpen={isItemsOpen} items={NavLinks} />
 				<Stack direction='row' justify='flex-end' align='center'>
@@ -72,7 +80,12 @@ export const NavBar = ({ user, setUser, ...props }) => {
 											style={{ fontSize: '18px' }}
 										/>
 									}
+									color='primary'
 									_hover={{
+										bgColor: 'primary',
+										color: 'white',
+									}}
+									_focus={{
 										bgColor: 'primary',
 										color: 'white',
 									}}>
@@ -84,6 +97,11 @@ export const NavBar = ({ user, setUser, ...props }) => {
 											style={{ fontSize: '18px' }}
 										/>
 									}
+									color='primary'
+									_focus={{
+										bgColor: 'primary',
+										color: 'white',
+									}}
 									_hover={{
 										bgColor: 'primary',
 										color: 'white',

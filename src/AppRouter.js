@@ -5,21 +5,18 @@ import {
 	Switch,
 	Redirect,
 } from 'react-router-dom';
-import { ChakraProvider, Box, Flex } from '@chakra-ui/react';
+import { ChakraProvider, Flex } from '@chakra-ui/react';
 import { NavBar } from 'components/NavBar';
 import { LandingPage } from './pages/LandingPage';
 import theme from './utils/theme';
 
 const AppRouter = () => {
 	const [user, setUser] = useState({ email: '', password: '' });
+	console.log(window.sidebar);
 	return (
 		<ChakraProvider theme={theme}>
 			<Router>
-				<Flex
-					height='100vh'
-					direction='column'
-					align='flex-start'
-					justify='flex-start'>
+				<Flex height='100%' direction='column' align='center'>
 					<NavBar user={user} setUser={(value) => setUser(value)} />
 					<Switch>
 						<Route exact path='/' component={LandingPage} />
