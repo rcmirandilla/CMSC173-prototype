@@ -22,22 +22,22 @@ export const ButtonContainerStyle = {
 
 export const TextStyle = {
 	width: '100%',
-	textAlign: ['center', 'center', 'left'],
+	textAlign: ['center', 'center', 'center', 'left'],
 	fontFamily: 'body',
 };
 
 export const RightContainerStyle = {
 	spacing: 5,
 	direction: 'column',
-	width: ['100%', '100%', '50%'],
-	align: ['center', 'center', 'flex-start'],
-	justify: ['center', 'center', 'flex-start'],
+	width: ['100%', '100%', '100%', '50%'],
+	align: ['center', 'center', 'center', 'flex-start'],
+	justify: ['center', 'center', 'center', 'flex-start'],
 	padding: ['1rem', '1rem', '0rem', '0rem'],
 };
 
 export const LeftContainerStyle = {
 	direction: 'column',
-	width: ['100%', '100%', '50%'],
+	width: ['100%', '100%', '100%', '50%'],
 	align: 'center',
 	justify: 'center',
 };
@@ -49,5 +49,5 @@ export const LandingPageStyle = {
 	height: '100%',
 	justify: 'center',
 	align: 'center',
-	wrap: ['wrap', 'wrap', 'nowrap'],
+	wrap: ['wrap', 'wrap', 'wrap', 'nowrap'],
 };
