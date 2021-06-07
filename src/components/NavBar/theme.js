@@ -22,7 +22,7 @@ export const NavBarContainerStyle = (scrollY) => ({
 	justify: 'space-between',
 	wrap: 'wrap',
 	width: '100%',
-	p: [2, 2, 4, 4],
+	p: ['.3rem', '.5rem', '1rem', '1rem'],
 	bg: 'transparent',
 	color: 'primary',
 	fontFamily: 'heading_1',

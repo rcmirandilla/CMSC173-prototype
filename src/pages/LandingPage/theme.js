@@ -32,6 +32,7 @@ export const RightContainerStyle = {
 	width: ['100%', '100%', '50%'],
 	align: ['center', 'center', 'flex-start'],
 	justify: ['center', 'center', 'flex-start'],
+	padding: ['1rem', '1rem', '0rem', '0rem'],
 };
 
 export const LeftContainerStyle = {
