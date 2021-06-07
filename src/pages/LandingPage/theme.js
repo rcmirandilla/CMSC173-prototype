@@ -1,8 +1,8 @@
 export const ButtonStyle = {
 	fontSize: '18px',
 	fontWeight: 'bolder',
-	color: 'primary',
-	bgColor: 'white',
+	color: 'white',
+	bgColor: 'primary',
 	_hover: {
 		borderShadow: 'none',
 	},
@@ -10,7 +10,7 @@ export const ButtonStyle = {
 	_focusWithin: { borderShadow: 'none' },
 	_active: {
 		boxShadow: 'none',
-		border: '4px solid white',
+		border: '1px solid white',
 	},
 	cursor: 'pointer',
 };
