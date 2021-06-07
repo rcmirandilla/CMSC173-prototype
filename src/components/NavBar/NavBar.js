@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Stack, Button } from '@chakra-ui/react';
+import { Stack, Button, Icon } from '@chakra-ui/react';
 import { NavBarContainer } from './NavBarContainer';
 import { ItemToggle } from './ItemToggle';
 import { ItemContainer } from './ItemContainer';
 import { AvatarMenu } from './AvatarMenu';
 import { Login } from 'pages/Login';
 import { LogInStyle, NavContainerStyle, ItemLinkStyle } from './theme';
+import { ReactComponent as Logo } from '../../assets/images/2.svg'
 
 const NavLinks = [
 	{
@@ -38,7 +39,7 @@ export const NavBar = ({ user, setUser, ...props }) => {
 				onClick={() => {
 					history.push('/');
 				}}>
-				SlideIT!
+				<Icon as={Logo} w="48px" h="48px"/>
 			</Button>
 			<Stack {...NavContainerStyle(isItemsOpen)}>
 				<ItemContainer isOpen={isItemsOpen} items={NavLinks} />

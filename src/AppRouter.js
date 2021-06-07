@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import { ChakraProvider, Flex } from '@chakra-ui/react';
 import { NavBar } from 'components/NavBar';
+import { SlideList } from 'pages/SlideList'
 import { LandingPage } from './pages/LandingPage';
 import theme from './utils/theme';
 
@@ -19,7 +20,7 @@ const AppRouter = () => {
 				<Flex height='100%' direction='column' align='center'>
 					<NavBar user={user} setUser={(value) => setUser(value)} />
 					<Switch>
-						<Route exact path='/' component={LandingPage} />
+						<Route exact path='/' component={user.email === '' && user.password === '' ? LandingPage : SlideList} />
 						<Redirect to='/' />
 					</Switch>
 				</Flex>
