@@ -16,7 +16,7 @@ export const ItemMainContainerStyle = (isOpen) => ({
 	flexBasis: { base: '100%', md: 'auto' },
 });
 
-export const NavBarContainerStyle = (scrollY) => ({
+export const NavBarContainerStyle = {
 	as: 'nav',
 	align: ['flex-start', 'flex-start', 'center', 'center'],
 	justify: 'space-between',
@@ -27,10 +27,10 @@ export const NavBarContainerStyle = (scrollY) => ({
 	color: 'primary',
 	fontFamily: 'heading_1',
 	fontWeight: 'bold',
-	position: scrollY > 1 ? 'sticky' : 'none',
+	position: 'sticky',
 	top: 0,
-	zIndex: 999,
-});
+	zIndex: 99999999999,
+};
 
 export const ItemLinkStyle = {
 	fontSize: '16px',
