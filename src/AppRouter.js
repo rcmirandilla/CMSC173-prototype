@@ -17,7 +17,14 @@ const AppRouter = () => {
 	return (
 		<ChakraProvider theme={theme}>
 			<Router>
-				<Flex height='100%' direction='column' align='center'>
+				<Flex
+					direction='column'
+					align='center'
+					justify='flex-start'
+					width='100%'
+					height='100%'
+					position='fixed'
+					overflow='auto'>
 					<NavBar user={user} setUser={(value) => setUser(value)} />
 					<Switch>
 						<Route exact path='/' component={user.email === '' && user.password === '' ? LandingPage : SlideList} />

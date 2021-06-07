@@ -1,8 +1,8 @@
 export const ButtonStyle = {
-	fontSize: '16px',
-	color: 'white',
-	bgColor: 'primary',
-	border: '1px solid white',
+	fontSize: '18px',
+	fontWeight: 'bolder',
+	color: 'primary',
+	bgColor: 'white',
 	_hover: {
 		borderShadow: 'none',
 	},
@@ -10,7 +10,7 @@ export const ButtonStyle = {
 	_focusWithin: { borderShadow: 'none' },
 	_active: {
 		boxShadow: 'none',
-		border: '3px solid white',
+		border: '4px solid white',
 	},
 	cursor: 'pointer',
 };
@@ -32,7 +32,7 @@ export const RightContainerStyle = {
 	width: ['100%', '100%', '100%', '50%'],
 	align: ['center', 'center', 'center', 'flex-start'],
 	justify: ['center', 'center', 'center', 'flex-start'],
-	padding: ['1rem', '1rem', '1rem', '0rem'],
+	padding: ['1rem', '1rem', '1rem', '2rem'],
 };
 
 export const LeftContainerStyle = {
@@ -44,10 +44,10 @@ export const LeftContainerStyle = {
 
 export const LandingPageStyle = {
 	direction: 'row',
-	padding: ['1rem', '2rem', '3rem', '4rem'],
+	padding: ['1rem', '2rem', '3rem', '3.5rem'],
 	width: '100%',
 	height: '100%',
 	justify: 'center',
-	align: 'center',
+	align: ['flex-start', 'flex-start', 'center', 'center'],
 	wrap: ['wrap', 'wrap', 'wrap', 'nowrap'],
 };
