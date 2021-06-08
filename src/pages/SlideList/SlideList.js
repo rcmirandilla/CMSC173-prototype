@@ -4,7 +4,7 @@ import { initialData } from './index'
 import { useHistory } from 'react-router-dom'
 
 export const SlideList = () => {
-  const [data, setData] = useState(initialData);
+  const [data] = useState(initialData);
   const history = useHistory()
 
 
