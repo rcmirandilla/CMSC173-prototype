@@ -22,10 +22,6 @@ const NavLinks = [
 		header: 'Discover',
 		link: '/discover',
 	},
-	{
-		header: 'About',
-		link: '/about',
-	},
 ];
 
 export const NavBar = ({ user, setUser, ...props }) => {
