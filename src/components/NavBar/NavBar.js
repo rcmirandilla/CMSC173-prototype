@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { Stack, Button, Icon } from '@chakra-ui/react';
 import { NavBarContainer } from './NavBarContainer';
 import { ItemToggle } from './ItemToggle';
@@ -7,12 +7,16 @@ import { ItemContainer } from './ItemContainer';
 import { AvatarMenu } from './AvatarMenu';
 import { Login } from 'pages/Login';
 import { LogInStyle, NavContainerStyle, ItemLinkStyle } from './theme';
-import { ReactComponent as Logo } from '../../assets/images/2.svg'
+import { ReactComponent as Logo } from '../../assets/images/1.svg'
 
 const NavLinks = [
 	{
 		header: 'Create',
 		link: '/create',
+	},
+	{
+		header: 'Upload',
+		link: '/upload',
 	},
 	{
 		header: 'Discover',
@@ -26,9 +30,11 @@ const NavLinks = [
 
 export const NavBar = ({ user, setUser, ...props }) => {
 	const history = useHistory();
+	const location = useLocation()
 	const [loginToggle, setLoginToggle] = useState(false);
 	const [isItemsOpen, setIsItemsOpen] = useState(false);
 	return (
+		location.pathname !== '/present' ? 
 		<NavBarContainer
 			{...props}
 			align={!isItemsOpen ? 'center' : ''}
@@ -39,7 +45,7 @@ export const NavBar = ({ user, setUser, ...props }) => {
 				onClick={() => {
 					history.push('/');
 				}}>
-				<Icon as={Logo} w="48px" h="48px"/>
+				<Icon as={Logo} w="120px" h="120px"/>
 			</Button>
 			<Stack {...NavContainerStyle(isItemsOpen)}>
 				<ItemContainer isOpen={isItemsOpen} items={NavLinks} />
@@ -69,5 +75,6 @@ export const NavBar = ({ user, setUser, ...props }) => {
 				}}
 			/>
 		</NavBarContainer>
+		: ''
 	);
 };

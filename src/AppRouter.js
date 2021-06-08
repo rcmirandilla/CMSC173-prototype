@@ -9,10 +9,13 @@ import { ChakraProvider, Flex } from '@chakra-ui/react';
 import { NavBar } from 'components/NavBar';
 import { SlideList } from 'pages/SlideList'
 import { LandingPage } from './pages/LandingPage';
+import { CreateSlide } from './pages/CreateSlide'
+import { PresentSlide } from './pages/PresentSlide'
+import { UploadSlide } from './pages/UploadSlide'
 import theme from './utils/theme';
 
 const AppRouter = () => {
-	const [user, setUser] = useState({ email: '', password: '' });
+	const [user, setUser] = useState({ email: 's', password: 's' });
 	console.log(window.sidebar);
 	return (
 		<ChakraProvider theme={theme}>
@@ -28,6 +31,9 @@ const AppRouter = () => {
 					<NavBar user={user} setUser={(value) => setUser(value)} />
 					<Switch>
 						<Route exact path='/' component={user.email === '' && user.password === '' ? LandingPage : SlideList} />
+						<Route exact path='/create' component={CreateSlide} />
+						<Route exact path='/present' component={PresentSlide} />
+						<Route exact path='/upload' component={UploadSlide} />
 						<Redirect to='/' />
 					</Switch>
 				</Flex>
