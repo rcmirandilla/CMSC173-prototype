@@ -25,6 +25,7 @@ export const NavBarContainerStyle = {
 	justify: 'space-between',
 	width: '100%',
 	wrap: 'wrap',
+	mb: '1.5rem',
 	p: ['.3rem', '.5rem', '1rem', '1rem'],
 	bg: 'transparent',
 	color: 'primary',

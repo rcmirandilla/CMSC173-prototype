@@ -1,50 +1,114 @@
-import React from 'react'
-import { Heading, HStack, VStack, Flex, Spacer, Button, Box, IconButton, Image } from '@chakra-ui/react'
-import { AddIcon, EditIcon, QuestionIcon, ChatIcon, CheckCircleIcon, TimeIcon, AttachmentIcon, StarIcon } from '@chakra-ui/icons'
-import { useHistory } from 'react-router-dom'
-import Present_1 from '../../assets/Present_1.png'
-import Present_2 from '../../assets/Present_2.png'
-import Present_3 from '../../assets/Present_3.png'
-import Present_4 from '../../assets/Present_4.png'
-import Present_5 from '../../assets/Present_5.png'
+import React from 'react';
+import {
+	Heading,
+	HStack,
+	Flex,
+	Button,
+	IconButton,
+	Image,
+} from '@chakra-ui/react';
+import {
+	EditIcon,
+	QuestionIcon,
+	ChatIcon,
+	CheckCircleIcon,
+	TimeIcon,
+	AttachmentIcon,
+	StarIcon,
+} from '@chakra-ui/icons';
+import { useHistory } from 'react-router-dom';
+import Present_1 from '../../assets/Present_1.png';
+import { SideBar } from './SideBar';
+import { BottomBar } from './BottomBar';
 
 export const CreateSlide = () => {
-  const history = useHistory()
+	const history = useHistory();
 
-  return (
-    <div>
-      <Flex align="center" w="95vw" h="12vh">
-        <Heading>Untitled</Heading>
-        <Spacer />
-        <Button colorScheme="blue" leftIcon={<StarIcon />} onClick={() => history.push('/present')}>Present</Button>
-      </Flex>
-      <HStack spacing={12} align="flex-start">
-            <Box w="20vw" p="4" maxH="70vh" overflowY="auto">
-              <VStack spacing={4} align="flex-start">
-                <Button leftIcon={<AddIcon />} size="sm" w="100%">New</Button>
-                <Image src={Present_1} h="120px" border="solid 2px" borderColor="primary" borderRadius="base"/>
-                <Image src={Present_2} h="120px" />
-                <Image src={Present_3} h="120px" />
-                <Image src={Present_4} h="120px" />
-                <Image src={Present_5} h="120px" />
-              </VStack>
-            </Box>
-        <Box bg="white" bgImage={Present_1} bgSize="60vw 70vh" boxShadow="md" w="60vw" h="70vh"> </Box>
-        <VStack w="4vw" color="primary" py="4" borderRadius="base" bg="white">
-          {/* Textbox */}
-          <IconButton variant="ghost" icon={<EditIcon />} />
-          {/* Images/File */}
-          <IconButton variant="ghost" icon={<AttachmentIcon />} />
-          {/* Quiz */}
-          <IconButton variant="ghost" icon={<QuestionIcon />} />
-          {/* Question */}
-          <IconButton variant="ghost" icon={<ChatIcon />} />
-          {/* Poll */}
-          <IconButton variant="ghost" icon={<CheckCircleIcon />} />
-          {/* Timed Quiz */}
-          <IconButton variant="ghost" icon={<TimeIcon />} />
-        </VStack>
-      </HStack>
-    </div>
-  )
-}
+	return (
+		<Flex
+			width='90%'
+			maxHeight='80%'
+			direction='column'
+			align='center'
+			justify='center'>
+			<HStack
+				align='center'
+				w='100%'
+				p='4'
+				justify={['center', 'center', 'center', 'flex-start']}
+				spacing='4'
+				mb='2'>
+				<Heading fontSize='200%'>Untitled</Heading>
+				<Button
+					bg='primary'
+					color='white'
+					_hover={{
+						bg: 'white',
+						color: 'primary',
+					}}
+					leftIcon={<StarIcon />}
+					onClick={() => history.push('/present')}>
+					Present
+				</Button>
+			</HStack>
+			<Flex align='flex-start' height='80%' width='100%'>
+				<SideBar />
+				<Flex
+					w='100%'
+					align='flex-start'
+					justify='flex-start'
+					height='100%'
+					wrap={['wrap', 'wrap', 'wrap', 'unset']}>
+					<Flex
+						h={['40%', '65%', '85%', '100%']}
+						justify='center'
+						mx={['0', '0', '4', '4']}>
+						<Image src={Present_1} objectFit='fill' />
+					</Flex>
+					<Flex
+						w={['100%', '100%', '100%', '8%']}
+						align='flex-start'
+						height={['10%', '10%', '15%', '100%']}
+						mx={[4, 4, 4, 0]}
+						my={[5, 5, 5, 0]}>
+						<Flex
+							height={['', '', '100%', '100%']}
+							direction={['row', 'row', 'row', 'column']}
+							align='center'
+							textAlign='center'
+							w='100%'
+							justify={{ base: 'center', sm: 'center' }}
+							color='primary'
+							borderRadius='base'
+							bg='white'>
+							{/* Textbox */}
+							<IconButton variant='ghost' icon={<EditIcon />} />
+							{/* Images/File */}
+							<IconButton
+								variant='ghost'
+								icon={<AttachmentIcon />}
+							/>
+							{/* Quiz */}
+							<IconButton
+								variant='ghost'
+								icon={<QuestionIcon />}
+							/>
+							{/* Question */}
+							<IconButton variant='ghost' icon={<ChatIcon />} />
+							{/* Poll */}
+							<IconButton
+								variant='ghost'
+								icon={<CheckCircleIcon />}
+							/>
+							{/* Timed Quiz */}
+							<IconButton variant='ghost' icon={<TimeIcon />} />
+						</Flex>
+					</Flex>
+					<Flex display={['flex', 'flex', 'flex', 'none']}>
+						<BottomBar />
+					</Flex>
+				</Flex>
+			</Flex>
+		</Flex>
+	);
+};
