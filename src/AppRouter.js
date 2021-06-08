@@ -15,7 +15,7 @@ import { UploadSlide } from './pages/UploadSlide'
 import theme from './utils/theme';
 
 const AppRouter = () => {
-	const [user, setUser] = useState({ email: 's', password: 's' });
+	const [user, setUser] = useState({ email: '', password: '' });
 	console.log(window.sidebar);
 	return (
 		<ChakraProvider theme={theme}>
