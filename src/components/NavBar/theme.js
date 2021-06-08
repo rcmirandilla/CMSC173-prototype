@@ -5,10 +5,10 @@ export const ItemToggleStyle = {
 export const ItemContainerStyle = {
 	spacing: 2,
 	align: 'center',
-	justify: ['stretch', 'stretch', 'flex-end', 'flex-end'],
+	justify: ['center', 'center', 'flex-end', 'flex-end'],
 	direction: ['column', 'column', 'row', 'row'],
-	pt: [2, 2, 0, 0],
-	mr: [2, 2, 4, 4],
+	pt: [4, 4, 0, 0],
+	mr: [0, 0, 4, 4],
 };
 
 export const ItemMainContainerStyle = (isOpen) => ({
@@ -22,7 +22,7 @@ export const ItemMainContainerStyle = (isOpen) => ({
 export const NavBarContainerStyle = {
 	as: 'nav',
 	align: 'center',
-	justify: 'center',
+	justify: 'space-between',
 	width: '100%',
 	wrap: 'wrap',
 	p: ['.3rem', '.5rem', '1rem', '1rem'],
@@ -70,19 +70,6 @@ export const LogInStyle = (isItemsOpen) => ({
 	},
 	cursor: 'pointer',
 	mr: [2, 2, 0, 0],
-});
-
-export const NavContainerStyle = (isItemsOpen) => ({
-	align: 'center',
-	flex: '1',
-	direction: [
-		isItemsOpen ? 'row-reverse' : 'row',
-		isItemsOpen ? 'row-reverse' : 'row',
-		'row',
-		'row',
-	],
-	wrap: 'wrap-reverse',
-	justify: 'flex-end',
 });
 
 export const MenuItemStyle = {

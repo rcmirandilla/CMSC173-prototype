@@ -7,7 +7,8 @@ import { ItemContainer } from './ItemContainer';
 import { AvatarMenu } from './AvatarMenu';
 import { Login } from 'pages/Login';
 import { LogInStyle, ItemLinkStyle } from './theme';
-import { ReactComponent as Logo } from '../../assets/1.svg';
+import { ReactComponent as Logo1 } from '../../assets/1.svg';
+import { ReactComponent as Logo2 } from '../../assets/2.svg';
 
 const NavLinks = [
 	{
@@ -21,10 +22,6 @@ const NavLinks = [
 	{
 		header: 'Discover',
 		link: '/discover',
-	},
-	{
-		header: 'About',
-		link: '/about',
 	},
 ];
 
@@ -40,17 +37,21 @@ export const NavBar = ({ user, setUser, ...props }) => {
 			bg={!isItemsOpen ? 'white' : 'primary'}
 			color={!isItemsOpen ? 'primary' : 'white'}>
 			<ItemToggle
-				alignSelf='flex-start'
 				toggle={() => setIsItemsOpen(!isItemsOpen)}
 				isOpen={isItemsOpen}
 			/>
-			<Spacer display={{ base: 'block', md: 'none' }} />
 			<Button
+				alignSelf='flex-end'
 				{...ItemLinkStyle}
 				onClick={() => {
 					history.push('/');
 				}}>
-				<Icon as={Logo} w='120px' h='120px' />
+				<Icon
+					align='center'
+					as={isItemsOpen ? Logo2 : Logo1}
+					w='120px'
+					h='120px'
+				/>
 			</Button>
 			<Spacer />
 			<ItemContainer

@@ -8,7 +8,15 @@ export const ItemContainer = ({ isOpen, items, ...props }) => {
 		<Box {...ItemMainContainerStyle(isOpen)} {...props}>
 			<Stack {...ItemContainerStyle}>
 				{items.map((item, index) => (
-					<ItemLink key={index} link={item.link}>
+					<ItemLink
+						key={index}
+						w={isOpen[1] === 'type2' ? '100%' : 'none'}
+						link={item.link}
+						_hover={
+							isOpen[0] && isOpen[1] === 'type2'
+								? { bgColor: 'white', color: 'primary' }
+								: {}
+						}>
 						{item.header}
 					</ItemLink>
 				))}
