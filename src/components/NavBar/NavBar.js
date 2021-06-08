@@ -7,7 +7,7 @@ import { ItemContainer } from './ItemContainer';
 import { AvatarMenu } from './AvatarMenu';
 import { Login } from 'pages/Login';
 import { LogInStyle, NavContainerStyle, ItemLinkStyle } from './theme';
-import { ReactComponent as Logo } from '../../assets/images/1.svg'
+import { ReactComponent as Logo } from '../../assets/1.svg'
 
 const NavLinks = [
 	{
