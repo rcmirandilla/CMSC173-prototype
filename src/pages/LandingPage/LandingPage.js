@@ -26,11 +26,11 @@ export const LandingPage = () => {
 					{...TextStyle}
 					fontSize='24px'
 					fontWeight='bolder'
-					color='white'>
+					color='primary'>
 					Discover and Create your own Presentation Slides through
 					SlideIT!
 				</Text>
-				<Text {...TextStyle} fontSize='18px' color='white'>
+				<Text {...TextStyle} fontSize='18px' color='secondary'>
 					Over 50,000+ Teachers and Students use this application to
 					create, share, and present their slides over a low metered
 					network
