@@ -5,8 +5,8 @@ import { ItemContainerStyle, ItemMainContainerStyle } from './theme';
 
 export const ItemContainer = ({ isOpen, items, ...props }) => {
 	return (
-		<Box {...ItemMainContainerStyle(isOpen)}>
-			<Stack {...ItemContainerStyle} {...props}>
+		<Box {...ItemMainContainerStyle(isOpen)} {...props}>
+			<Stack {...ItemContainerStyle}>
 				{items.map((item, index) => (
 					<ItemLink key={index} link={item.link}>
 						{item.header}

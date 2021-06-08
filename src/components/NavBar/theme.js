@@ -5,23 +5,26 @@ export const ItemToggleStyle = {
 export const ItemContainerStyle = {
 	spacing: 2,
 	align: 'center',
-	justify: ['center', 'flex-end', 'flex-end', 'flex-end'],
-	direction: 'row',
+	justify: ['stretch', 'stretch', 'flex-end', 'flex-end'],
+	direction: ['column', 'column', 'row', 'row'],
 	pt: [2, 2, 0, 0],
 	mr: [2, 2, 4, 4],
 };
 
 export const ItemMainContainerStyle = (isOpen) => ({
-	display: { base: isOpen ? 'block' : 'none', md: 'block' },
+	display: {
+		base: isOpen[0] && isOpen[1] === 'type2' ? 'block' : 'none',
+		md: isOpen[1] === 'type2' ? 'none' : 'block',
+	},
 	flexBasis: { base: '100%', md: 'auto' },
 });
 
 export const NavBarContainerStyle = {
 	as: 'nav',
-	align: ['flex-start', 'flex-start', 'center', 'center'],
-	justify: 'space-between',
-	wrap: 'wrap',
+	align: 'center',
+	justify: 'center',
 	width: '100%',
+	wrap: 'wrap',
 	p: ['.3rem', '.5rem', '1rem', '1rem'],
 	bg: 'transparent',
 	color: 'primary',
@@ -70,19 +73,16 @@ export const LogInStyle = (isItemsOpen) => ({
 });
 
 export const NavContainerStyle = (isItemsOpen) => ({
-	align: ['flex-end', 'flex-end', 'center', 'center'],
+	align: 'center',
+	flex: '1',
 	direction: [
-		isItemsOpen ? 'column-reverse' : 'row',
-		isItemsOpen ? 'column-reverse' : 'row',
+		isItemsOpen ? 'row-reverse' : 'row',
+		isItemsOpen ? 'row-reverse' : 'row',
 		'row',
 		'row',
 	],
-	justify: [
-		isItemsOpen ? 'flex-end' : 'center',
-		isItemsOpen ? 'flex-end' : 'center',
-		'flex-end',
-		'flex-end',
-	],
+	wrap: 'wrap-reverse',
+	justify: 'flex-end',
 });
 
 export const MenuItemStyle = {
