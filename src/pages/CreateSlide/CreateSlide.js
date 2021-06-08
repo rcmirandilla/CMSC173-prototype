@@ -31,8 +31,9 @@ export const CreateSlide = () => {
             </Box>
         <Box bg="white" bgImage={Present_1} bgSize="60vw 70vh" boxShadow="md" w="60vw" h="70vh"> </Box>
         <VStack w="4vw" color="primary" py="4" borderRadius="base" bg="white">
+          {/* Textbox */}
           <IconButton variant="ghost" icon={<EditIcon />} />
-          {/* Images/FIle */}
+          {/* Images/File */}
           <IconButton variant="ghost" icon={<AttachmentIcon />} />
           {/* Quiz */}
           <IconButton variant="ghost" icon={<QuestionIcon />} />
