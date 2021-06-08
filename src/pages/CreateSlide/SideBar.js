@@ -28,7 +28,7 @@ export const SideBar = () => {
 				direction='column'
 				align='flex-start'
 				width='100%'
-				h='90%'
+				h='88%'
 				pr='4'
 				overflowY='hidden'
 				_hover={{

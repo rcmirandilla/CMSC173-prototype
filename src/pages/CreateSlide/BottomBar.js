@@ -13,15 +13,16 @@ export const BottomBar = () => {
 			<Box h='100%' mr='2'>
 				<Button
 					h='100%'
+					w='100%'
 					alignText='center'
-					leftIcon={<AddIcon />}
 					bg='secondary'
 					color='white'
 					_hover={{
 						bg: 'white',
 						color: 'secondary',
-					}}
-				/>
+					}}>
+					<AddIcon />
+				</Button>
 			</Box>
 			<Flex
 				justify='flex-start'
