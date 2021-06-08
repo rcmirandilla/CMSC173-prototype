@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading, HStack, VStack, Flex, Spacer, Button, Box, IconButton, Image } from '@chakra-ui/react'
-import { AddIcon, EditIcon, QuestionIcon, ChatIcon, CheckCircleIcon, TimeIcon, ViewIcon, StarIcon } from '@chakra-ui/icons'
+import { AddIcon, EditIcon, QuestionIcon, ChatIcon, CheckCircleIcon, TimeIcon, AttachmentIcon, StarIcon } from '@chakra-ui/icons'
 import { useHistory } from 'react-router-dom'
 import Present_1 from '../../assets/Present_1.png'
 import Present_2 from '../../assets/Present_2.png'
@@ -32,11 +32,16 @@ export const CreateSlide = () => {
         <Box bg="white" bgImage={Present_1} bgSize="60vw 70vh" boxShadow="md" w="60vw" h="70vh"> </Box>
         <VStack w="4vw" color="primary" py="4" borderRadius="base" bg="white">
           <IconButton variant="ghost" icon={<EditIcon />} />
+          {/* Images/FIle */}
+          <IconButton variant="ghost" icon={<AttachmentIcon />} />
+          {/* Quiz */}
           <IconButton variant="ghost" icon={<QuestionIcon />} />
+          {/* Question */}
           <IconButton variant="ghost" icon={<ChatIcon />} />
+          {/* Poll */}
           <IconButton variant="ghost" icon={<CheckCircleIcon />} />
+          {/* Timed Quiz */}
           <IconButton variant="ghost" icon={<TimeIcon />} />
-          <IconButton variant="ghost" icon={<ViewIcon />} />
         </VStack>
       </HStack>
     </div>
