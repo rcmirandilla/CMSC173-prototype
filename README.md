@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# SlideIt!
+This repository is a final project for CMSC 173 - Human-Computer Interaction.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Information
 
-## Available Scripts
+SlideIT!  is an web interactive slides prototype application which aims to create and present an interactive slide with a little consumption of internet data. It was created using ReactJS and deployed using netlify. The application can be accessed from this url: [SlideIT!](https://slideit.netlify.app/) 
 
-In the project directory, you can run:
 
-### `yarn start`
+## Functionalities
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Present Slides
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Presenting slides can be accessed by two means, one is by clicking one of the slides in View All User Slides and two is by clicking the present in the Create Slides. Once it is done, the presenter will be redirected to the presenter view. In the presenter view, the presenter can copy the link to the presentation where the viewer can see current slides in real-time. After accessing the link, the app will ask the viewer for his/her name.
 
-### `yarn test`
+![SlideIT!](./assets/image10.png) 
+![SlideIT!](./assets/image12.png) 
+![SlideIT!](./assets/image2.png) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### View All User Slides
 
-### `yarn build`
+All of the slides that the presenter created will be shown in this view. It can be accessed in the landing page of the application once the user logs in or by clicking the logo of the SlideIT in the Navigation Bar anchored at the top.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![SlideIT!](./assets/image13.png) 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Create Slides
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The presenter can create slides similar to how google slides are created. However, there are some additional features that you can add as a slide in your presentation to add some interactivity to the slides.
 
-### `yarn eject`
+![SlideIT!](./assets/image7.png) 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Interactive Features
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Interactive Features can be added up to the presentation slides using the toolbar at the right side in the Create Slides Section. These features can be interactively used by the participants/viewers once the presenter presents his/her slides . The features that can be added are as follows: TextBox, Image/File Input, Quiz, Question Management Tool, Poll and a Timed Quiz.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![SlideIT!](./assets/image4.png) 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Presenter Authentication
 
-## Learn More
+The users can sign in and sign up using their facebook account and google account however if they do not want to use those accounts, they can try to sign up using the sign up form. Once they are logged in, they are directed to their list of the slides they created. Users can log out their accounts and they will be redirected to the homepage.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![SlideIT!](./assets/image8.png)
+![SlideIT!](./assets/image9.png) 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Discover
 
-### Code Splitting
+The users can see other live presentations in the Discover page that are set to public. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![SlideIT!](./assets/image1.png) 
 
-### Analyzing the Bundle Size
+### Upload
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The users can also upload their pre-made presentations and present it using this functionality. 
 
-### Making a Progressive Web App
+![SlideIT!](./assets/image3.png) 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Presenter Settings
 
-### Advanced Configuration
+The users can also customize or tweak their accounts in the Accounts Settings that can be found in the menu once the user’s avatar in the navigation bar is clicked.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![SlideIT!](./assets/image9.png) 
 
-### Deployment
+### Responsiveness
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The application can be used in mobile devices since it was mobile responsive. However, to utilize the application’s full functionality, the users are encouraged to open the application on the desktop.
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![SlideIT!](./assets/image6.png)
+![SlideIT!](./assets/image5.png) 
+![SlideIT!](./assets/image11.png) 
